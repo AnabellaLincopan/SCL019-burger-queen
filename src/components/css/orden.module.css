@@ -1,0 +1,116 @@
+.boxorden {
+  box-sizing: border-box;
+  width: 90vw;
+  height: 34vh;
+  background: #ffffff;
+  border: 1px solid #444544;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  margin: auto;
+}
+
+.boxclient,
+.final {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 4vw;
+  margin: 2vh;
+}
+
+p {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-size: 19px;
+  line-height: 27px;
+  font-weight: 600;
+  text-align: center;
+  color: #444544;
+}
+
+.inputmenu {
+  width: 12vw;
+  height: auto;
+}
+
+.boxproductos {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 25vw;
+}
+
+.boxorder {
+  display: flex;
+  box-sizing: border-box;
+  height: 6vw;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  margin: auto;
+  align-items: center;
+}
+.productos {
+  display: flex;
+  background: #ffffff;
+  width: 50vw;
+  height: 3vh;
+  font-size: 17px;
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameitem {
+  margin: auto;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  width: 20vw;
+}
+
+.symbols {
+  width: 24px;
+  height: 25px;
+  box-sizing: border-box;
+  background: #a4d792;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+/* RESPONSIVE PANTALLA GRANDE */
+
+@media screen and (min-width: 1024px) {
+  .boxorden {
+    margin: 3vw;
+    width: 44vw;
+    height: 30vw;
+    align-items: center;
+  }
+
+  .boxorder {
+    height: 5vw;
+    border-radius: 8px;
+  }
+  .productos {
+    width: 23vw;
+    height: auto;
+  }
+
+  .boxproductos {
+    height: 17vw;
+  }
+  .buttons {
+    width: 15vw;
+  }
+}

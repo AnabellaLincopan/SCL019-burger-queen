@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F6FFF2;
+  font-family: 'Noto Serif';
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}

@@ -1,0 +1,17 @@
+.titles {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 26px;
+  text-align: center;
+  color: #444544;
+}
+/* RESPONSIVE PANTALLA GRANDE */
+
+@media screen and (min-width: 1024px) {
+  .body {
+    display: flex;
+    flex-direction: row;
+  }
+}

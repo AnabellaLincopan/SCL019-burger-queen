@@ -1,0 +1,109 @@
+.boxmenu {
+  /* display:flex; */
+  box-sizing: border-box;
+  width: 90vw;
+  height: 38vh;
+  background: #ffffff;
+  border: 1px solid #444544;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  margin: auto;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 80vw;
+  height: 8vh;
+  margin: auto;
+}
+
+.buttonbebestibles,
+.buttonpasteles,
+.buttonsandwiches {
+  display: inline-block;
+  width: 15vw;
+  height: 3.5vh;
+  border: none;
+  background: #a4d792;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 27px;
+  text-align: center;
+  color: #444544;
+  cursor: pointer;
+}
+
+.boxcarta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  padding-top: 0.5vw;
+  height: 23vh;
+}
+
+.productos {
+  display: flex;
+  box-sizing: border-box;
+  background: #ffffff;
+  width: 60vw;
+  height: 4vh;
+  font-size: 17px;
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.productos:hover {
+  box-shadow: 0 2px 10px rgba(252, 243, 237, 0.884);
+  transition: all 0.2s ease;
+}
+
+.namecarta {
+  margin-right: auto;
+}
+
+.boxclient {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 7vw;
+}
+
+/* RESPONSIVE PANTALLA GRANDE */
+@media screen and (min-width: 1024px) {
+  .boxmenu {
+    margin: 3vw;
+    width: 44vw;
+    height: 30vw;
+  }
+
+  .buttons {
+    width: 30vw;
+  }
+
+  .boxcarta {
+    height: 17vw;
+  }
+
+  .productos {
+    width: 35vw;
+  }
+}

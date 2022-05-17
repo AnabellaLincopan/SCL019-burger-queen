@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/SCL019-burger-queen/static/css/main.a8149a38.css",
+    "main.js": "/SCL019-burger-queen/static/js/main.786853c5.js",
+    "static/media/logo_transparent.png": "/SCL019-burger-queen/static/media/logo_transparent.43022569ef74dc7a840c.png",
+    "index.html": "/SCL019-burger-queen/index.html",
+    "main.a8149a38.css.map": "/SCL019-burger-queen/static/css/main.a8149a38.css.map",
+    "main.786853c5.js.map": "/SCL019-burger-queen/static/js/main.786853c5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8149a38.css",
+    "static/js/main.786853c5.js"
+  ]
+}

@@ -1,6 +1,7 @@
 {
   "projects": {
-    "antv": "antv-burguer-queen"
+    "antv": "antv-burguer-queen",
+    "plantcaffe": "antv-burguer-queen"
   },
   "targets": {}
 }

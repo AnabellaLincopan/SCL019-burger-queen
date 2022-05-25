@@ -1,15 +1,18 @@
 // import { React, useState } from 'react';
 import React, { useState } from 'react';
+import { db } from '../../firebase/firebase';
+import { collection, addDoc } from 'firebase/firestore';
 // import styles from '../css/orden.module.css';
 
 const Context = React.createContext();
 
-const Provider = ({ propvalue }) => {
+const Provider = ({ children }) => {
   // estado para nombre cliente y mesa
   const [name, setName] = useState('');
   const [table, setTable] = useState('');
+  const [count, setCount] = useState(1);
 
-  // función para nombre cliente y mesa
+  // para nombre cliente y mesa
   const dataclient = (e) => {
     if (e.target.name === 'name') {
       setName(e.target.value);
@@ -21,7 +24,7 @@ const Provider = ({ propvalue }) => {
   // estado para añadir productos a sección orden
   const [product, setProduct] = useState([]);
 
-  //función para añadir productos
+  //para añadir productos
   const increase = (e) => {
     //se crea variable que representa un producto ya existente en el carro
     const productExist = product.find((item) => item.id === e.id); 
@@ -40,7 +43,7 @@ const Provider = ({ propvalue }) => {
     }
   };
   
-  // función para restar productos
+  // para restar productos
   const decrease = (e) => {
     const productExist = product.find((item) => item.id === e.id);
     // si la cantidad de producto existente es igual a 1
@@ -58,7 +61,7 @@ const Provider = ({ propvalue }) => {
     }
   };
 
-  //función para eliminar producto
+  //para eliminar producto
   const remove = (e) => {
     const productExist = product.find((item) => item.id === e.id);
     if (productExist.quant) {
@@ -66,11 +69,27 @@ const Provider = ({ propvalue }) => {
     }
   };
 
-  // función para suma total productos
+  // para suma total productos
   const total = product.reduce(
     (total, item) => total + item.price * item.quant,
     0
   );
+
+  //para guardar pedido en firestore
+  const submitOrder = async () => {
+    try {
+      await addDoc(collection(db, 'Order'), {
+        client: name,
+        table: table,
+        count: count,
+        order: product,
+        total: total,
+        date: new Date(),
+      })
+    } catch (error) {
+      throw new Error("No se pudo guardar el pedido");
+    }
+  };
 
   const props = {
     name,
@@ -84,9 +103,12 @@ const Provider = ({ propvalue }) => {
     decrease,
     remove,
     total,
+    count,
+    setCount,
+    submitOrder,
   };
 
-  return <Context.Provider value={props}>{propvalue}</Context.Provider>;
+  return <Context.Provider value={props}>{children}</Context.Provider>;
 };
 
 export { Context, Provider };

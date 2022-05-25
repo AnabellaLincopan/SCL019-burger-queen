@@ -12,7 +12,21 @@ const Total = () => {
         <p>$ {context.total}</p>
       </div>
       <div>
-        <button>Enviar</button>
+        {context.product.length !== 0 && context.name.length !== 0 && context.table.length !==0 ? (
+          <button
+            onClick={() => {
+              context.submitOrder();
+              context.setProduct([]);
+              context.setName('');
+              context.setTable('');
+              context.setCount(context.count + 1);
+            }}
+          >
+            Enviar
+          </button>
+        ) : (
+          <div>Ingrese datos y productos al carro</div>
+        )}
       </div>
     </section>
   );

@@ -85,6 +85,7 @@ const Provider = ({ children }) => {
         order: product,
         total: total,
         date: new Date(),
+        status: "Pendiente",
       })
     } catch (error) {
       throw new Error("No se pudo guardar el pedido");

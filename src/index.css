@@ -1,10 +1,14 @@
+@font-face {
+  font-family: 'CalligraphyFLF';
+  src: url('../public/CalligraphyFLF.ttf');
+}
 * {
   box-sizing: border-box;
 }
 
 body {
   background-color: #F6FFF2;
-  font-family: 'Noto Serif';
+  font-family: 'CalligraphyFLF';
   overflow: hidden;
   width: 100vw;
   height: 100vh;

@@ -19,4 +19,39 @@ const CocinaPedidos = () => {
           }
         );
       }, []);
+
+      return orden.length > 0 ? (
+        orden.map((order) => (
+          <section>
+            <div>
+
+            </div>
+            <main>
+              {orden.order.map((item)=> (
+                <div key={item.id} className={styles.boxorder}>
+                  <div >
+              <p className={styles.nameitem}>{item.name}</p>
+              <p> {item.count}</p>
+            </div>
+                </div>
+              )
+
+              )}
+            </main>
+          </section>
+        )
+
+        )
+      ): (
+    <section className={styles.title1}>
+      <h1 className={styles.title2}> Sin pedidos pendientes</h1>
+      <img
+        src=""
+        alt="good job"
+        className={styles.goodJob}
+      />
+    </section>
+  );
 }
+
+export default CocinaPedidos;

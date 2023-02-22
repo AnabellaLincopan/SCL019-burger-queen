@@ -9,7 +9,7 @@
 body {
   background-color: #F6FFF2;
   font-family: 'CalligraphyFLF';
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 100vw;
   height: 100vh;
   margin: 0;
